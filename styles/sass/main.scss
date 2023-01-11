@@ -66,9 +66,22 @@ body{
                 li{
                     background-color: rgba(0, 0, 0, 0.485);
                     color: white;
-                    padding: 10px;
+                    padding-left: 10px;
                     border-radius: 3px;
                     margin: 10px 0px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .li-delete{
+                        width: 10%;
+                        height: 30px;
+                        background: linear-gradient(to bottom left, red, darkred, black);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 30px;
+                    }
                 }
             }
         }

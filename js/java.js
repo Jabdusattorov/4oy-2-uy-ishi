@@ -20,6 +20,7 @@
 let form = document.querySelector("#form");
 let input = document.querySelector("#input");
 let ul = document.querySelector("#ul");
+let li_delete = document.querySelector(".li-delete")
 
 let index = JSON.parse(localStorage.getItem("keys"));
 
@@ -45,12 +46,16 @@ index.forEach((todo) => {
   li.setAttribute("data-id", id);
   li.innerText = text;
 
+  const li_delete = document.createElement("div")
+  li_delete.className = "li-delete"
+  li_delete.textContent = "-"
+  li.append(li_delete)
+
   ul.append(li);
 
   li.addEventListener("dblclick", deleteTodo);
 });
-
-form.addEventListener("submit", (e) => {
+ul.addEventListener("submit", (e) => {
   e.preventDefault();
   let text = input.value;
   let li = document.createElement("li");
